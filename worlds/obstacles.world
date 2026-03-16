@@ -8,6 +8,9 @@
     <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
     <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
     <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
     <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
     <gravity>0 0 -9.8000000000000007</gravity>
     <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
@@ -67,7 +70,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box'>
-      <pose>2.7563776551127077 1.1717705757317136 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
+      <pose>1.8029219467110664 -4.9402323017846799 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -114,7 +117,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='cylinder'>
-      <pose>-0.34066392370932219 2.1303293639565002 0.49999942638036005 -4.0404336437523498e-19 -2.3057665822832463e-20 1.5014312442724882e-21</pose>
+      <pose>2.1278173043812618 3.7029515542140965 0.49999942638036005 2.4289046005190011e-20 1.5754678275059134e-20 -9.0169543863959e-21</pose>
       <link name='cylinder_link'>
         <inertial>
           <inertia>
@@ -149,53 +152,6 @@
               <radius>0.5</radius>
               <length>1</length>
             </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
-            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
-            <specular>1 1 1 1</specular>
-          </material>
-        </visual>
-        <pose>0 0 0 0 0 0</pose>
-        <enable_wind>false</enable_wind>
-      </link>
-      <static>false</static>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='box_0'>
-      <pose>-0.93552739635650584 0.29336016424530165 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
-      <link name='box_link'>
-        <inertial>
-          <inertia>
-            <ixx>0.16666</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.16666</iyy>
-            <iyz>0</iyz>
-            <izz>0.16666</izz>
-          </inertia>
-          <mass>1</mass>
-          <pose>0 0 0 0 0 0</pose>
-        </inertial>
-        <collision name='box_collision'>
-          <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='box_visual'>
-          <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
           </geometry>
           <material>
             <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
